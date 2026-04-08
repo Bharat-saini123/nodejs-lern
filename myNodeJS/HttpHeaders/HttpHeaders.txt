@@ -1,0 +1,39 @@
+http headers hota hai usme additinal info hoti hai client ki kaha se data aaya hhai kaha per jayega kis type ka data hoga
+
+nodejs mai req.headers se get ker sakte hai 
+like kis type ka url hai content-type,ip,address,additional info hogi kis machinne se aaya hai is type ka data hoga
+
+
+
+Http headers are an important part of the API request and response as they represent
+the meta-data associated with tha APi  request and response.
+
+Headers carry information for the reauest and response body
+
+custom headers banate time "x" aage add karna best pracrtise hoti hhai
+ res.setHeaders("x-new-headers","data");
+
+ Host – kis domain par request ja rahi hai
+
+User-Agent – client ki info (browser / app)
+
+Accept – client kya response accept karega
+
+Accept-Language – language preference
+
+Accept-Encoding – gzip, br etc.
+
+Content-Type – body ka type (JSON, form-data)
+
+Content-Length – body ka size
+
+Authorization – token / auth info
+
+Cookie – cookies data
+
+Referer – request kahan se aayi
+
+Origin – CORS ke liye
+
+Cache-Control – caching rules
+

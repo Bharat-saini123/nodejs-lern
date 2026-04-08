@@ -1,0 +1,12 @@
+javascript browser k ander hi run hoti thi after v8 engine and c++ combine karnne k baada nodejs lagnauge bani phir  hum browers k bahar bhi javascript ko run ker sakte hia 
+nodejs ki help se
+
+
+
+nodejs k advantages
+
+
+nodejs is run time environment of javascript
+we can run javascript outside of the browser
+javascript can talk native machine because of c++
+we can create web server in javascript

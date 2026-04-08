@@ -1,0 +1,72 @@
+authentication have two pattern
+
+1 state full
+which maintain state or data or server side
+
+isme data server mai rakhte hia serer mai limited memeory hoti hai agar server se data galti se lost ho jaye to sab logout ho jate hai
+ye iska disadvantage rehta hai
+ res.cookie()
+
+
+2 state less
+which has no state
+
+isme jwt auth use kerte hai
+
+
+
+🆚 Stateful vs Stateless (JWT)
+Point	Stateful (Session)	Stateless (JWT)
+Server memory	❌ more	✅ less
+Easy logout	✅ instant	❌ hard
+Horizontal scaling	❌ (Redis needed)	✅
+Security	⭐⭐⭐⭐	⭐⭐⭐
+Recommended for	Dashboards, Admin panels	APIs, Mobile apps
+🔥 Kab Stateful auth use kare?
+
+✅ Admin panel
+✅ Banking / Finance apps
+✅ Small–medium scale apps
+✅ Jab instant logout chahiye
+
+❌ Highly scalable public APIs
+
+⚠️ Interview Tip
+
+👉 Best answer:
+
+“JWT for stateless APIs, Sessions + Redis for stateful applications.”
+
+Agar chaho to mai:
+
+Prisma + DB session model
+
+Next.js + session auth
+
+JWT + session hybrid auth
+
+
+
+❓ Kya Redis hamesha zaroori hai?
+
+Nahi, lekin:
+
+Redis use karo agar:
+
+Admin panel / dashboard
+
+Banking / fintech
+
+Multi-login control chahiye
+
+Load balancer / multiple servers
+
+Logout instantly chahiye
+
+Redis skip kar sakte ho agar:
+
+Single server
+
+Very small app
+
+Learning phase

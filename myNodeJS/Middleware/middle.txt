@@ -1,0 +1,2 @@
+middleware eeek function hota hia jo her req per execute hota hai and agar thek hia to aage forwared keer deta hia nahi to vahi se responsee reeturn ker deta hai.
+ eek reeeq mai mutilple middlware bhi hoi sakti hia

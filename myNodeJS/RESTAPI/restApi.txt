@@ -1,0 +1,7 @@
+restapi server client arcitecture per kaam kerta hai
+
+ssr renderig fast hiti hai client side rendering(CSR) slow hoti hai
+
+
+
+api link: https://www.mockaroo.com/

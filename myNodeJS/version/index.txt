@@ -1,0 +1,44 @@
+express-^5.2.1
+
+
+
+here "1" meaning (third part) for minor fixes it is optional dont worry  if they change because this is very small changes
+ye kabhi bhi change hoo isse exitng code mai kabhi bhi fark nahi pdega ye bahut chota ya minor fix hota hai
+^5.2.1
+^5.2.2
+^5.2.3
+^5.2.4
+
+
+
+
+here "2" meaning (second part) it is recommend bug fix  or security fix
+jab koi new feature ya secuity fix hota hia tab aata hai ye change ye exiting code mai issue nhai karta
+bahut kam chance hai exitng code na chale
+^5.2.1
+^5.3.1
+^5.4.1
+^5.5.1
+
+
+here "5" meaning (ist part) it is major release part and breaking update so very crusios for that 
+
+jab ist part change ho to project mai update nahi karna chaiye nahi to exitsing code mii bug aane k chances kaafi jayada hai new project start karte hai to achi practise hoti hai new version update kerke start kare
+^5.5.1
+^6.5.1
+^7.5.1
+
+
+"^" iska matlab hota hai ye automatic second and third  ko update ker dega like but ist ko change nahi krega
+
+^5.5.1
+^5.6.3
+^5.15.1
+^5.18.7
+
+"~" agar ye age hau to ye sirf minor changes ko automatic update krega sirf third wale ko
+
+~5.5.1
+~5.5.4
+~5.5.9
+~5.5.15
