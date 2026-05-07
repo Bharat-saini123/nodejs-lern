@@ -5,3 +5,157 @@ ssr renderig fast hiti hai client side rendering(CSR) slow hoti hai
 
 
 api link: https://www.mockaroo.com/
+
+
+REST API ka full form hota hai:
+Representational State Transfer Application Programming Interface
+
+Simple words me:
+REST API ek tarika hai jisse frontend (browser/mobile app) aur backend (server) ek dusre se HTTP requests (GET, POST, PUT, DELETE) ke through baat karte hain.
+
+Example:
+
+GET /users → users ki list lana
+POST /login → login karna
+PUT /user/1 → user update karna
+DELETE /user/1 → user delete karna
+Node.js related REST API interview questions
+
+Agar interview me REST API + Node.js se related questions aaye to mostly ye puchte hain:
+
+🔹 1. REST API kya hota hai?
+
+REST API ek architecture style hai jisse client (frontend/mobile) aur server HTTP requests ke through communicate karte hain.
+
+Data JSON format me exchange hota hai
+Stateless hota hai (server request ka previous state store nahi karta)
+🔹 2. HTTP Methods kya hote hain?
+GET → Data fetch karna
+POST → Naya data create karna
+PUT → Existing data update karna (full update)
+PATCH → Partial update
+DELETE → Data delete karna
+🔹 3. Status Codes kya hote hain?
+200 → OK (success)
+201 → Created (new resource created)
+400 → Bad Request (client error)
+401 → Unauthorized (login required)
+403 → Forbidden (permission nahi hai)
+404 → Not Found
+500 → Server Error
+🔹 4. Express.js kya hai?
+
+Express.js Node.js ka ek lightweight framework hai jo APIs aur web apps banana easy banata hai.
+
+Routing easy hoti hai
+Middleware support karta hai
+Fast development possible hota hai
+🔹 5. Middleware kya hota hai?
+
+Middleware ek function hota hai jo request aur response ke beech me execute hota hai.
+
+Use cases:
+
+Authentication check
+Logging
+Error handling
+
+Example:
+
+app.use((req, res, next) => {
+  console.log("Request received");
+  next();
+});
+🔹 6. Node.js me REST API kaise banate ho?
+
+Steps:
+
+Express install
+Routes define
+Controller likhna
+DB connect (MongoDB/MySQL)
+
+Basic example:
+
+app.get("/users", (req, res) => {
+  res.json({ message: "User list" });
+});
+🔹 7. Express Router kya hota hai?
+
+Router se API routes ko modular banate hain.
+
+Example:
+
+const router = express.Router();
+
+router.get("/users", getUsers);
+module.exports = router;
+🔹 8. JWT authentication kya hota hai?
+
+JWT (JSON Web Token) ek secure token hota hai jo user login ke baad generate hota hai.
+
+Flow:
+
+Login → token generate
+Client store token
+Har request me token send
+Server verify karta hai
+🔹 9. CORS kya hota hai?
+
+CORS (Cross-Origin Resource Sharing) ek security feature hai jo different domain se API request allow/block karta hai.
+
+Fix:
+
+const cors = require("cors");
+app.use(cors());
+🔹 10. MVC architecture kya hota hai?
+Model → Database logic
+View → UI (frontend)
+Controller → Business logic
+
+Node.js me mostly backend me Model + Controller use hota hai.
+
+🔹 11. REST vs GraphQL difference?
+REST → multiple endpoints (/users, /posts)
+GraphQL → single endpoint, flexible data fetch
+
+GraphQL me over-fetching / under-fetching nahi hoti.
+
+🔹 12. Rate limiting kya hota hai?
+
+Rate limiting se ek user ek time me limited requests hi kar sakta hai.
+
+Example: 100 requests/minute allowed
+
+🔹 13. Error handling best practice?
+Try/catch use karo
+Central error middleware banao
+Proper status codes return karo
+🔹 14. Async/Await vs Promises?
+Promises → .then().catch()
+Async/Await → cleaner syntax, readable code
+
+Async/await is preferred in modern Node.js.
+
+🔹 15. CRUD API example?
+Create → POST /users
+Read → GET /users
+Update → PUT /users/:id
+Delete → DELETE /users/:id
+🔹 16. File upload API kaise?
+multer package use hota hai
+FormData se file send hoti hai
+🔹 17. Pagination kaise?
+
+Example:
+
+/users?page=1&limit=10
+
+Backend:
+
+skip = (page-1)*limit
+limit = 10
+🔹 18. Logging & monitoring?
+console.log (basic)
+Winston / Morgan (advanced logging)
+PM2 for production monitoring
